@@ -29,11 +29,19 @@ export function UrgentMaterialModal({ isOpen, onOpenChange }: UrgentMaterialModa
           <p className="text-muted-foreground">
             Nuestro equipo está listo para atender tu pedido de inmediato. ¡Contáctanos ahora!
           </p>
-          <Button asChild size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white">
-            <a href="https://wa.me/5215549414017?text=Hola,%20necesito%20material%20urgente." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
+          <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white" onClick={(e) => {
+            e.preventDefault();
+            const url = "https://wa.me/5215549414017?text=Hola,%20necesito%20material%20urgente.";
+            if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+              (window as any).gtag_report_conversion(url);
+            } else {
+              window.open(url, '_blank');
+            }
+          }}>
+            <span className="flex items-center justify-center gap-3">
               <MessageSquare className="h-5 w-5" />
               Contactar por WhatsApp
-            </a>
+            </span>
           </Button>
           <Button asChild size="lg" className="w-full">
             <a href="tel:+525525989751" className="flex items-center justify-center gap-3">

@@ -44,11 +44,19 @@ export function ContactModal({ isOpen, onOpenChange }: ContactModalProps) {
           ))}
           
            <h3 className="text-sm font-medium text-muted-foreground text-center pt-3">Enviar mensaje</h3>
-          <Button asChild variant="secondary" size="lg" className="w-full">
-            <a href="https://wa.me/5215549414017?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización%20para%20puntales." target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3">
+          <Button variant="secondary" size="lg" className="w-full" onClick={(e) => {
+            e.preventDefault();
+            const url = "https://wa.me/5215549414017?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización%20para%20puntales.";
+            if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+              (window as any).gtag_report_conversion(url);
+            } else {
+              window.open(url, '_blank');
+            }
+          }}>
+            <span className="flex items-center justify-center gap-3">
               <MessageSquare className="h-5 w-5" />
               Enviar WhatsApp
-            </a>
+            </span>
           </Button>
         </div>
       </DialogContent>

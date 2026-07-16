@@ -545,7 +545,15 @@ export default function Home() {
             "rounded-full shadow-lg p-4 h-16 w-16 bg-green-500 hover:bg-green-600"
           )}
         >
-          <a href="https://wa.me/5215549414017?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización." target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/5215549414017?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización." target="_blank" rel="noopener noreferrer" onClick={(e) => {
+            e.preventDefault();
+            const url = "https://wa.me/5215549414017?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización.";
+            if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+              (window as any).gtag_report_conversion(url);
+            } else {
+              window.open(url, '_blank');
+            }
+          }}>
             <MessageSquare className="h-7 w-7 text-white" />
             <span className="sr-only">Contactar por WhatsApp</span>
           </a>

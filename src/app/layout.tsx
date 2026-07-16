@@ -27,7 +27,7 @@ export default function RootLayout({
         <Toaster />
         <Script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js" async />
 
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js) - GA4 + Google Ads */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CJD81JCC2E"
           strategy="afterInteractive"
@@ -38,6 +38,24 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-CJD81JCC2E');
+            gtag('config', 'AW-987044751');
+          `}
+        </Script>
+        {/* Google Ads WhatsApp conversion */}
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.open(url, '_blank');
+                }
+              };
+              gtag('event', 'conversion', {
+                'send_to': 'AW-987044751/EqbqCPHnpdEcEI-31NYD',
+                'event_callback': callback
+              });
+              return false;
+            }
           `}
         </Script>
       </body>

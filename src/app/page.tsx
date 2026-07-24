@@ -4,7 +4,8 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import PuntalSelector from '@/components/puntal-selector';
-import { Phone, MessageSquare, Menu, X, CheckCircle, Shield, Users, Truck, Clock, PackageCheck, Quote, Wrench, Layers, Anchor, Waves, Building2, ArrowRight } from 'lucide-react';
+import { Phone, Menu, X, CheckCircle, Shield, Users, Truck, Clock, PackageCheck, Quote, Wrench, Layers, Anchor, Waves, Building2, ArrowRight } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import { Button } from '@/components/ui/button';
 import { ContactModal } from '@/components/contact-modal';
 import { UrgentMaterialModal } from '@/components/urgent-material-modal';
@@ -470,7 +471,7 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-6">
               <Button size="lg" variant="secondary" onClick={() => setIsModalOpen(true)}>
-                <MessageSquare className="mr-2 h-5 w-5"/> Solicitar Cotización
+                <WhatsAppIcon className="mr-2 h-5 w-5"/> Solicitar Cotización
               </Button>
               <a href="tel:+525525989751" className="flex items-center gap-2 hover:underline text-lg font-semibold">
                 <Phone className="w-5 h-5" />
@@ -554,7 +555,7 @@ export default function Home() {
               window.open(url, '_blank');
             }
           }}>
-            <MessageSquare className="h-7 w-7 text-white" />
+            <WhatsAppIcon className="h-7 w-7 text-white" />
             <span className="sr-only">Contactar por WhatsApp</span>
           </a>
         </Button>

@@ -8,7 +8,8 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { Phone, MessageSquare } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import type { Dispatch, SetStateAction } from 'react';
 
 interface UrgentMaterialModalProps {
@@ -39,7 +40,7 @@ export function UrgentMaterialModal({ isOpen, onOpenChange }: UrgentMaterialModa
             }
           }}>
             <span className="flex items-center justify-center gap-3">
-              <MessageSquare className="h-5 w-5" />
+              <WhatsAppIcon className="h-5 w-5" />
               Contactar por WhatsApp
             </span>
           </Button>

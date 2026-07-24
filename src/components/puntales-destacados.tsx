@@ -5,25 +5,8 @@ import { puntalesData, Puntal } from '@/lib/data';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowUpToLine, Weight, MoveRight } from 'lucide-react';
+import Image from 'next/image';
 import React from 'react';
-
-// This is necessary to extend JSX intrinsics for model-viewer
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'model-viewer': MyModelViewerProps;
-    }
-  }
-}
-interface MyModelViewerProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
-  src: string;
-  alt: string;
-  'camera-controls'?: boolean;
-  'auto-rotate'?: boolean;
-  'shadow-intensity'?: string;
-  'ar'?: boolean;
-  style?: React.CSSProperties;
-}
 
 
 const PuntalCard = ({ puntal, onQuoteClick }: { puntal: Puntal, onQuoteClick: (id: string) => void }) => {
@@ -31,16 +14,17 @@ const PuntalCard = ({ puntal, onQuoteClick }: { puntal: Puntal, onQuoteClick: (i
   
   return (
     <Card className="flex flex-col overflow-hidden bg-card shadow-lg hover:shadow-primary/20 transition-all duration-300 ease-in-out transform hover:-translate-y-2 border border-transparent hover:border-primary/50">
-      <CardHeader className="p-0 bg-background">
-        <model-viewer
-            src={puntal.modelSrc}
+      <CardHeader className="p-0 bg-white">
+        <div className="relative w-full h-[250px]">
+          <Image
+            src={puntal.image}
             alt={puntal.model}
-            camera-controls
-            auto-rotate
-            shadow-intensity="1"
-            style={{ width: '100%', height: '250px', backgroundColor: 'transparent' }}
+            fill
+            className="object-contain p-4"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             data-ai-hint={puntal.dataAiHint}
-        />
+          />
+        </div>
       </CardHeader>
       <CardContent className="p-6 flex flex-col flex-grow">
         <CardTitle className="mb-2 text-xl font-bold">{puntal.model}</CardTitle>

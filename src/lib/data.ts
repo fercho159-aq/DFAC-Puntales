@@ -8,6 +8,7 @@ export type Puntal = {
   id: string;
   model: string;
   modelSrc: string;
+  image: string;
   dataAiHint: string;
   minHeight: number; // cm
   maxHeight: number; // cm
@@ -20,6 +21,7 @@ export type Puntal = {
 export const puntalesData: Puntal[] = [
   {
     id: "ligero-180-320",
+    image: "/images/puntales/ligero-180-320.jpg",
     model: "Ligero 1.80-3.20",
     modelSrc: "/models/model.glb",
     dataAiHint: "construction prop",
@@ -37,6 +39,7 @@ export const puntalesData: Puntal[] = [
   },
   {
     id: "ligero-220-400",
+    image: "/images/puntales/ligero-220-400.jpg",
     model: "Ligero 2.20-4.00",
     modelSrc: "/models/model.glb",
     dataAiHint: "steel support",
@@ -54,6 +57,7 @@ export const puntalesData: Puntal[] = [
   },
   {
     id: "b40-231-400",
+    image: "/images/puntales/b40-231-400.jpg",
     model: "B40 2.31-4.00 (Reforzado)",
     modelSrc: "/models/model.glb",
     dataAiHint: "heavy duty prop",
@@ -71,6 +75,7 @@ export const puntalesData: Puntal[] = [
   },
   {
     id: "b50-281-500",
+    image: "/images/puntales/b50-281-500.jpg",
     model: "B50 2.81-5.00 (Extra Fuerte)",
     modelSrc: "/models/model.glb",
     dataAiHint: "extra strong prop",

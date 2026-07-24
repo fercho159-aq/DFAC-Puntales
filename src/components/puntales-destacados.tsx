@@ -4,7 +4,7 @@
 import { puntalesData, Puntal } from '@/lib/data';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowUpToLine, Weight, MoveRight } from 'lucide-react';
+import { ArrowUpToLine, Weight, MoveRight, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 
@@ -49,13 +49,9 @@ const PuntalCard = ({ puntal, onQuoteClick }: { puntal: Puntal, onQuoteClick: (i
 
 export const PuntalesDestacados = () => {
   const handleQuoteClick = (puntalId: string) => {
-    const selectorSection = document.getElementById('modelos');
-    
-    // You can use the puntalId to pre-select the model in the selector if you implement that logic
-    // For now, it just scrolls
-    
-    if (selectorSection) {
-      selectorSection.scrollIntoView({ behavior: 'smooth' });
+    const formSection = document.getElementById('formulario');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -72,6 +68,10 @@ export const PuntalesDestacados = () => {
           {puntalesData.map(puntal => (
             <PuntalCard key={puntal.id} puntal={puntal} onQuoteClick={handleQuoteClick} />
           ))}
+        </div>
+        <div className="flex items-center justify-center gap-3 mt-10 text-2xl md:text-3xl font-bold text-green-600">
+          <CheckCircle className="w-8 h-8 md:w-9 md:h-9" />
+          <span>Stock siempre disponible</span>
         </div>
       </div>
     </section>

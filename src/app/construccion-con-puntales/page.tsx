@@ -8,6 +8,7 @@ import { Phone, Shield, Wrench, Scaling, CheckCircle, ArrowUpToLine, Weight, Rul
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 
 const WA_URL = 'https://wa.me/5215549414017?text=Hola,%20me%20interesa%20información%20sobre%20puntales%20para%20construcción.';
+const WA_URL_2 = 'https://wa.me/5215519538328?text=Hola,%20me%20interesa%20información%20sobre%20puntales%20para%20construcción.';
 const TEL = '+525525989751';
 const TEL_DISPLAY = '55 2598 9751';
 
@@ -87,6 +88,65 @@ const modelos = [
   },
 ];
 
+const especificacionesTecnicas = [
+  {
+    nombre: 'Puntal Telescópico 2.00 – 3.60 m',
+    fabricacion: 'Fabricado bajo norma europea en Italia',
+    altura: '2.00 a 3.60 m',
+    resistenciaMin: { altura: '2.00 m', carga: '1,800 kg' },
+    resistenciaMax: { altura: '3.60 m', carga: '801 kg' },
+    tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
+    tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
+    base: '120 × 120 × 4.5 mm',
+    peso: '10.06 kg (22.13 lb)',
+  },
+  {
+    nombre: 'Puntal Telescópico 2.20 – 4.00 m',
+    fabricacion: 'Fabricado bajo norma europea en Italia',
+    altura: '2.20 a 4.00 m',
+    resistenciaMin: { altura: '2.20 m', carga: '1,800 kg' },
+    resistenciaMax: { altura: '4.00 m', carga: '758 kg' },
+    tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
+    tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
+    base: '120 × 120 × 4.5 mm',
+    peso: '11.00 kg (24.25 lb)',
+  },
+  {
+    nombre: 'Puntal Telescópico 3.20 – 5.00 m',
+    fabricacion: 'Fabricado bajo norma europea en Italia',
+    altura: '3.20 a 5.00 m',
+    resistenciaMin: { altura: '3.20 m', carga: '1,800 kg' },
+    resistenciaMax: { altura: '5.00 m', carga: '300 kg' },
+    tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
+    tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
+    base: '120 × 120 × 4.5 mm',
+    peso: '14.00 kg (30.86 lb)',
+  },
+];
+
+const certificaciones = [
+  {
+    icon: Ruler,
+    title: 'Ajuste cada 10 cm',
+    description: 'Regulación de altura mediante pin de acero reforzado de 14 mm de diámetro, para agilizar el proceso de fundición de losa.',
+  },
+  {
+    icon: Shield,
+    title: 'Factor de seguridad 1.7',
+    description: 'La tabla de capacidades de resistencia por altura se basa en el documento de certificación de fábrica, con un factor de seguridad de 1.7 respecto al valor de ruptura.',
+  },
+  {
+    icon: CheckCircle,
+    title: 'Prueba de humedad ASTM D2247-87',
+    description: 'El puntal pasa por una prueba de humedad en cámara con pintura electrostática, bajo la norma ASTM D2247-87.',
+  },
+  {
+    icon: Wrench,
+    title: 'Soldadura certificada ISO 15613:2005',
+    description: 'Registro de cualificación del proceso de soldadura según ISO 15613:2005, certificado No. P16W.0122.',
+  },
+];
+
 const usos = [
   'Apuntalamiento de losas y trabes durante el colado',
   'Soporte temporal de cimbra para muros y columnas',
@@ -121,7 +181,12 @@ export default function ConstruccionConPuntalesPage() {
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white">
                 <a href={WA_URL} target="_blank" rel="noopener noreferrer">
-                  <WhatsAppIcon className="mr-2 h-5 w-5" /> Cotizar por WhatsApp
+                  <WhatsAppIcon className="mr-2 h-5 w-5" /> Cotizar por WhatsApp (línea 1)
+                </a>
+              </Button>
+              <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white">
+                <a href={WA_URL_2} target="_blank" rel="noopener noreferrer">
+                  <WhatsAppIcon className="mr-2 h-5 w-5" /> Cotizar por WhatsApp (línea 2)
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
@@ -207,8 +272,69 @@ export default function ConstruccionConPuntalesPage() {
         </div>
       </section>
 
-      {/* Usos */}
+      {/* Ficha técnica */}
       <section className="py-16 md:py-24 px-4">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">Ficha Técnica: Puntal Telescópico</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Tabla de resistencias por altura con base en el documento de certificación enviado por fábrica,
+              para que conozcas exactamente la capacidad de carga de cada modelo.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[720px] border-collapse text-sm">
+              <thead>
+                <tr className="border-b-2 border-primary/20">
+                  <th className="text-left py-3 pr-4 font-bold">Modelo</th>
+                  <th className="text-left py-3 px-4 font-bold">Resistencia altura mínima</th>
+                  <th className="text-left py-3 px-4 font-bold">Resistencia altura máxima</th>
+                  <th className="text-left py-3 px-4 font-bold">Tubo interior</th>
+                  <th className="text-left py-3 px-4 font-bold">Tubo exterior</th>
+                  <th className="text-left py-3 px-4 font-bold">Base</th>
+                  <th className="text-left py-3 pl-4 font-bold">Peso</th>
+                </tr>
+              </thead>
+              <tbody>
+                {especificacionesTecnicas.map((e) => (
+                  <tr key={e.nombre} className="border-b border-border/50">
+                    <td className="py-4 pr-4 font-semibold">{e.nombre}<br /><span className="font-normal text-xs text-muted-foreground">{e.fabricacion}</span></td>
+                    <td className="py-4 px-4 text-muted-foreground">{e.resistenciaMin.altura} = {e.resistenciaMin.carga}</td>
+                    <td className="py-4 px-4 text-muted-foreground">{e.resistenciaMax.altura} = {e.resistenciaMax.carga}</td>
+                    <td className="py-4 px-4 text-muted-foreground">{e.tuboInterior}</td>
+                    <td className="py-4 px-4 text-muted-foreground">{e.tuboExterior}</td>
+                    <td className="py-4 px-4 text-muted-foreground">{e.base}</td>
+                    <td className="py-4 pl-4 text-muted-foreground">{e.peso}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {certificaciones.map((c) => (
+              <Card key={c.title} className="shadow-md">
+                <CardHeader>
+                  <c.icon className="w-9 h-9 text-primary" />
+                  <CardTitle className="text-base mt-2">{c.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">{c.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center text-sm text-muted-foreground max-w-3xl mx-auto">
+            Fácil instalación, poco mantenimiento, durabilidad y resistencia. Tipo de acero S235JR, bajo
+            regulación de fabricación UNI EN 729-2:1996.
+          </p>
+        </div>
+      </section>
+
+      {/* Usos */}
+      <section className="py-16 md:py-24 px-4 bg-secondary/30">
         <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="relative h-[320px] bg-white rounded-xl shadow-lg overflow-hidden order-last md:order-first">
             <Image
@@ -260,7 +386,12 @@ export default function ConstruccionConPuntalesPage() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white">
               <a href={WA_URL} target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="mr-2 h-5 w-5" /> Enviar WhatsApp
+                <WhatsAppIcon className="mr-2 h-5 w-5" /> Enviar WhatsApp (línea 1)
+              </a>
+            </Button>
+            <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white">
+              <a href={WA_URL_2} target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon className="mr-2 h-5 w-5" /> Enviar WhatsApp (línea 2)
               </a>
             </Button>
             <Button asChild size="lg" variant="secondary">

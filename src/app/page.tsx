@@ -15,6 +15,9 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
 import Autoplay from "embla-carousel-autoplay";
 import { FacebookIcon } from '@/components/icons';
@@ -30,15 +33,15 @@ const navLinks = [
   { href: '#beneficios', label: 'Beneficios' },
   { href: '#galeria', label: 'Galería' },
   { href: '#nosotros', label: 'Nosotros' },
-  { href: '#modelos', label: 'Cotizador' },
+  { href: '#formulario', label: 'Cotizador' },
   { href: '#contacto', label: 'Contacto' },
 ];
 
 const clientes = [
   { name: 'BBVA', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/15/BBVA_Bancomer_logo.svg' },
   { name: 'Aeropuerto Internacional Felipe Ángeles', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/60/010aeropuerto-felipe-angeles-2.jpg' },
-  { name: 'Secretaría de Marina', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/SEMAR_Logo_2019.svg/2560px-SEMAR_Logo_2019.svg.png' },
-  { name: 'UNAM', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Escudo-UNAM-escalable.svg/1024px-Escudo-UNAM-escalable.svg.png' },
+  { name: 'Secretaría de Marina', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/SEMAR_Logo_2019.svg' },
+  { name: 'UNAM', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/Escudo-UNAM-escalable.svg' },
 ];
 
 const beneficios = [
@@ -49,33 +52,92 @@ const beneficios = [
   },
   {
     icon: Shield,
-    title: 'Seguridad en Obra',
-    description: 'Nuestros puntales cumplen con las más altas normas de seguridad para garantizar la protección en tu proyecto.'
+    title: 'Seguridad Certificada',
+    description: 'Fabricados en acero S235JR bajo norma europea UNE-EN 1065, con tablas de carga verificadas y un factor de seguridad de 1.7 respecto al valor de ruptura, según el documento de certificación de fábrica.'
   },
   {
     icon: CheckCircle,
-    title: 'Montaje Rápido',
-    description: 'Diseñados para un ensamblaje y desmontaje eficiente, optimizando los tiempos de trabajo.'
+    title: 'Ajuste Preciso cada 10 cm',
+    description: 'Regulación de altura mediante pin de acero reforzado de 14 mm de diámetro, para agilizar el proceso de fundición de losa y optimizar los tiempos de montaje.'
   },
   {
     icon: Users,
-    title: 'Durabilidad Comprobada',
-    description: 'Fabricados con acero de alta calidad que asegura una larga vida útil y resistencia a la corrosión.'
+    title: 'Durabilidad Certificada',
+    description: 'Pintura electrostática probada en cámara de humedad bajo norma ASTM D2247-87, y soldadura con registro de cualificación ISO 15613:2005 (certificado No. P16W.0122), bajo regulación de fabricación UNI EN 729-2:1996.'
   }
+];
+
+const especificacionesTecnicas = [
+  {
+    nombre: 'Puntal Telescópico 2.00 – 3.60 m',
+    fabricacion: 'Fabricado bajo norma europea en Italia',
+    altura: '2.00 a 3.60 m',
+    resistenciaMin: { altura: '2.00 m', carga: '1,800 kg' },
+    resistenciaMax: { altura: '3.60 m', carga: '801 kg' },
+    tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
+    tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
+    base: '120 × 120 × 4.5 mm',
+    peso: '10.06 kg (22.13 lb)',
+  },
+  {
+    nombre: 'Puntal Telescópico 2.20 – 4.00 m',
+    fabricacion: 'Fabricado bajo norma europea en Italia',
+    altura: '2.20 a 4.00 m',
+    resistenciaMin: { altura: '2.20 m', carga: '1,800 kg' },
+    resistenciaMax: { altura: '4.00 m', carga: '758 kg' },
+    tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
+    tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
+    base: '120 × 120 × 4.5 mm',
+    peso: '11.00 kg (24.25 lb)',
+  },
+  {
+    nombre: 'Puntal Telescópico 3.20 – 5.00 m',
+    fabricacion: 'Fabricado bajo norma europea en Italia',
+    altura: '3.20 a 5.00 m',
+    resistenciaMin: { altura: '3.20 m', carga: '1,800 kg' },
+    resistenciaMax: { altura: '5.00 m', carga: '300 kg' },
+    tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
+    tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
+    base: '120 × 120 × 4.5 mm',
+    peso: '14.00 kg (30.86 lb)',
+  },
+];
+
+const certificaciones = [
+  {
+    icon: PackageCheck,
+    title: 'Ajuste cada 10 cm',
+    description: 'Regulación de altura mediante pin de acero reforzado de 14 mm de diámetro, para agilizar el proceso de fundición de losa.',
+  },
+  {
+    icon: Shield,
+    title: 'Factor de seguridad 1.7',
+    description: 'La tabla de capacidades de resistencia por altura se basa en el documento de certificación de fábrica, con un factor de seguridad de 1.7 respecto al valor de ruptura.',
+  },
+  {
+    icon: CheckCircle,
+    title: 'Prueba de humedad ASTM D2247-87',
+    description: 'El puntal pasa por una prueba de humedad en cámara con pintura electrostática, bajo la norma ASTM D2247-87.',
+  },
+  {
+    icon: Wrench,
+    title: 'Soldadura certificada ISO 15613:2005',
+    description: 'Registro de cualificación del proceso de soldadura según ISO 15613:2005, certificado No. P16W.0122.',
+  },
 ];
 
 const featuredProducts = [
     {
         name: 'Junta Ortogonal 4 Tornillos',
         description: 'Asegura uniones firmes y estables a 90 grados en andamios. Esencial para la seguridad estructural.',
-        image: 'https://www.gbmitaly.com/resources/images/giunti/GO04.jpg',
+        image: '/images/Productos/junta-ortogonal-4-tornillos.png',
         hint: 'scaffolding clamp',
         icon: Wrench
     },
     {
         name: 'Junta Giratoria 2 Tornillos',
         description: 'Permite uniones en ángulos variables con total seguridad. Perfecta para estructuras complejas y versátiles.',
-        image: 'https://m.media-amazon.com/images/I/511uP1r-GrL._UF894,1000_QL80_.jpg',
+        image: '/images/Productos/junta-giratoria-2-tornillos.png',
         hint: 'swivel coupler',
         icon: Layers
     },
@@ -103,7 +165,7 @@ const featuredProducts = [
     {
         name: 'Viga H-20 para Cimbra',
         description: 'Fabricada con madera de alta calidad y un diseño robusto, nuestra viga H-20 garantiza la máxima eficiencia y seguridad en sus proyectos de construcción.',
-        image: '/images/Productos/Vigas.webp',
+        image: '/images/Productos/viga-h20.jpeg',
         hint: 'h20 beam',
         icon: Building2
     }
@@ -149,12 +211,12 @@ const testimonials = [
 ];
 
 const galleryImages = [
-    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.08 PM.jpeg', alt: 'Puntales en obra de gran altura', hint: 'construction site', className: 'col-span-12 sm:col-span-6 md:col-span-4' },
-    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.07 PM.jpeg', alt: 'Almacén de puntales metálicos', hint: 'construction equipment', className: 'col-span-12 sm:col-span-6 md:col-span-4' },
-    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.06 PM.jpeg', alt: 'Detalle de puntal de acero reforzado', hint: 'steel props', className: 'col-span-12 sm:col-span-6 md:col-span-4' },
-    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.05 PM.jpeg', alt: 'Trabajadores ajustando puntales', hint: 'construction workers', className: 'col-span-12 sm:col-span-6' },
-    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.04 PM.jpeg', alt: 'Vista panorámica de cimbra con puntales', hint: 'formwork structure', className: 'col-span-12 sm:col-span-6' },
-    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.03 PM.jpeg', alt: 'Puntales listos para entrega', hint: 'building materials', className: 'col-span-12' },
+    { src: '/images/Galeria/puntales-almacen-1.jpeg', alt: 'Puntales en obra de gran altura', hint: 'construction site', className: 'col-span-12 sm:col-span-6 md:col-span-4 h-72' },
+    { src: '/images/Galeria/puntales-almacen-2.jpeg', alt: 'Almacén de puntales metálicos', hint: 'construction equipment', className: 'col-span-12 sm:col-span-6 md:col-span-4 h-72' },
+    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.06 PM.jpeg', alt: 'Detalle de puntal de acero reforzado', hint: 'steel props', className: 'col-span-12 sm:col-span-6 md:col-span-4 h-72' },
+    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.05 PM.jpeg', alt: 'Trabajadores ajustando puntales', hint: 'construction workers', className: 'col-span-12 sm:col-span-6 h-80' },
+    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.04 PM.jpeg', alt: 'Vista panorámica de cimbra con puntales', hint: 'formwork structure', className: 'col-span-12 sm:col-span-6 h-80' },
+    { src: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.03 PM.jpeg', alt: 'Puntales listos para entrega', hint: 'building materials', className: 'col-span-12 h-[26rem]' },
 ];
 
 export default function Home() {
@@ -173,6 +235,28 @@ export default function Home() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleWhatsAppFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const get = (key: string) => ((data.get(key) as string) || '').trim();
+    const lines = [
+      'Hola, quiero solicitar una cotización:',
+      `• Nombre: ${get('nombre')}`,
+      `• Teléfono: ${get('telefono')}`,
+      get('empresa') && `• Empresa: ${get('empresa')}`,
+      `• Producto de interés: ${get('producto')}`,
+      get('cantidad') && `• Cantidad aproximada: ${get('cantidad')}`,
+      get('ubicacion') && `• Ubicación de la obra: ${get('ubicacion')}`,
+      get('mensaje') && `• Mensaje: ${get('mensaje')}`,
+    ].filter(Boolean) as string[];
+    const url = `https://wa.me/5215549414017?text=${encodeURIComponent(lines.join('\n'))}`;
+    if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+      (window as any).gtag_report_conversion(url);
+    } else {
+      window.open(url, '_blank');
+    }
+  };
 
   const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -235,48 +319,73 @@ export default function Home() {
       </header>
 
       <main className="flex-grow">
-        <section id="inicio" className="w-full bg-card">
-           <div className="container mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-80px)] py-16 lg:py-0">
-                  <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-                      <h1 className="text-4xl md:text-6xl font-bold tracking-tighter !leading-tight">
-                          La <span className="text-primary">Solución Rápida</span> y Segura para tu Construcción
-                      </h1>
-                      <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl">
-                          Puntales, accesorios y todo lo que necesitas para tu obra, con entrega garantizada en menos de 24 horas. Calidad que construye confianza.
-                      </p>
-                      <div className="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 w-full md:w-auto">
-                          <Button size="lg" onClick={() => {
-                            const el = document.getElementById('modelos');
-                            if (el) el.scrollIntoView({ behavior: 'smooth' });
-                          }}>
-                              <ArrowRight className="mr-2 h-5 w-5"/> Iniciar Cotización
-                          </Button>
-                          <Button size="lg" variant="outline">
-                               Ver Catálogo
-                          </Button>
-                      </div>
+        <section id="inicio" className="relative w-full bg-black text-white overflow-hidden">
+           <video
+              className="absolute inset-0 w-full h-full object-cover"
+              src="/videos/VIDEO-2025-08-05-12-37-33.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              Tu navegador no soporta el tag de video.
+            </video>
+           <div className="absolute inset-0 bg-black/70 z-10"></div>
+           <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center justify-center min-h-[calc(100vh-80px)] py-12 md:py-24">
+              <div className="max-w-4xl">
+                  <div className="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-sm mb-4 border border-primary/50 font-medium">
+                      ¡Entrega garantizada en menos de 24 horas!
                   </div>
-                  <div className="w-full h-[300px] lg:h-[500px] rounded-xl overflow-hidden shadow-2xl shadow-primary/20">
-                    <video
-                      className="w-full h-full object-cover"
-                      src="/videos/VIDEO-2025-08-05-12-37-33.mp4"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    >
-                      Tu navegador no soporta el tag de video.
-                    </video>
+                  <h1 className="text-4xl md:text-6xl font-bold tracking-tighter !leading-tight">
+                      La <span className="text-primary">Solución Rápida</span> y Segura para tu Construcción
+                  </h1>
+                  <p className="mt-4 text-base md:text-xl text-white/80 max-w-3xl mx-auto">
+                      Puntales, accesorios y todo lo que necesitas para tu obra, con entrega garantizada en menos de 24 horas. Calidad que construye confianza.
+                  </p>
+                  <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                      <Button size="lg" onClick={() => {
+                        const el = document.getElementById('formulario');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}>
+                          <ArrowRight className="mr-2 h-5 w-5"/> Iniciar Cotización
+                      </Button>
+                      <Button size="lg" variant="outline" className="bg-transparent text-white border-white/80 hover:bg-white hover:text-primary" onClick={() => {
+                        const el = document.getElementById('puntales-destacados');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}>
+                           Ver Catálogo
+                      </Button>
+                  </div>
+
+                  <div className="mt-12 w-full max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+                        {keyFeatures.map((feature, index) => (
+                          <div key={index} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg flex items-center gap-4 border border-white/20">
+                            <feature.icon className="w-8 h-8 text-primary flex-shrink-0"/>
+                            <div>
+                                <h3 className="font-bold text-white">{feature.title}</h3>
+                                <p className="text-white/80 text-sm">{feature.description}</p>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
                   </div>
               </div>
            </div>
         </section>
         
+        <PuntalesDestacados />
+
         <section id="beneficios" className="py-16 md:py-24">
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {keyFeatures.map((feature, index) => (
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold">Beneficios Técnicos DFAC</h2>
+              <p className="text-muted-foreground mt-4 text-lg">
+                Puntales certificados que cumplen con los estándares de fabricación más estrictos de la industria.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {beneficios.map((feature, index) => (
                 <div key={index} className="flex items-start gap-6">
                   <div className="flex-shrink-0 text-primary bg-primary/10 p-4 rounded-full">
                     <feature.icon className="w-8 h-8"/>
@@ -291,44 +400,67 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="accesorios" className="py-16 md:py-24 bg-card">
-            <div className="container mx-auto">
-                <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 className="text-3xl lg:text-4xl font-bold">Completa tu Equipo con Nuestros Accesorios</h2>
-                    <p className="text-muted-foreground mt-4 text-lg">
-                        Desde juntas de alta resistencia hasta vigas y moños, tenemos todo lo necesario para asegurar la máxima versatilidad y seguridad en tu obra.
-                    </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    {featuredProducts.map((product, index) => (
-                        <Card key={index} className="overflow-hidden bg-background shadow-md hover:shadow-primary/20 transition-all duration-300 flex flex-col group transform hover:-translate-y-1">
-                            <CardHeader className="p-0">
-                                <Image 
-                                    src={product.image}
-                                    alt={product.name}
-                                    width={600}
-                                    height={400}
-                                    className="object-cover aspect-[3/2] w-full"
-                                    data-ai-hint={product.hint}
-                                />
-                            </CardHeader>
-                            <CardContent className="p-6 flex flex-col flex-grow">
-                                <div className="flex items-start gap-4 mb-3">
-                                    <product.icon className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
-                                    <h3 className="text-xl font-bold">{product.name}</h3>
-                                </div>
-                                <CardDescription className="mb-6 flex-grow">{product.description}</CardDescription>
-                                <Button onClick={() => setIsModalOpen(true)} variant="outline" className="w-full mt-auto group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors">
-                                    Solicitar Cotización
-                                </Button>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
+        <section id="especificaciones" className="py-16 md:py-24 bg-card">
+          <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold">Ficha Técnica: Puntal Telescópico</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Tabla de resistencias por altura con base en el documento de certificación enviado por
+                fábrica, para que conozcas exactamente la capacidad de carga de cada modelo DFAC.
+              </p>
             </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[720px] border-collapse text-sm">
+                <thead>
+                  <tr className="border-b-2 border-primary/20">
+                    <th className="text-left py-3 pr-4 font-bold">Modelo</th>
+                    <th className="text-left py-3 px-4 font-bold">Resistencia altura mínima</th>
+                    <th className="text-left py-3 px-4 font-bold">Resistencia altura máxima</th>
+                    <th className="text-left py-3 px-4 font-bold">Tubo interior</th>
+                    <th className="text-left py-3 px-4 font-bold">Tubo exterior</th>
+                    <th className="text-left py-3 px-4 font-bold">Base</th>
+                    <th className="text-left py-3 pl-4 font-bold">Peso</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {especificacionesTecnicas.map((e) => (
+                    <tr key={e.nombre} className="border-b border-border/50">
+                      <td className="py-4 pr-4 font-semibold">{e.nombre}<br /><span className="font-normal text-xs text-muted-foreground">{e.fabricacion}</span></td>
+                      <td className="py-4 px-4 text-muted-foreground">{e.resistenciaMin.altura} = {e.resistenciaMin.carga}</td>
+                      <td className="py-4 px-4 text-muted-foreground">{e.resistenciaMax.altura} = {e.resistenciaMax.carga}</td>
+                      <td className="py-4 px-4 text-muted-foreground">{e.tuboInterior}</td>
+                      <td className="py-4 px-4 text-muted-foreground">{e.tuboExterior}</td>
+                      <td className="py-4 px-4 text-muted-foreground">{e.base}</td>
+                      <td className="py-4 pl-4 text-muted-foreground">{e.peso}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+              {certificaciones.map((c) => (
+                <Card key={c.title} className="shadow-md">
+                  <CardHeader>
+                    <c.icon className="w-9 h-9 text-primary" />
+                    <CardTitle className="text-base mt-2">{c.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">{c.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <p className="mt-8 text-center text-sm text-muted-foreground max-w-3xl mx-auto">
+              Fácil instalación, poco mantenimiento, durabilidad y resistencia. Tipo de acero S235JR, bajo
+              regulación de fabricación UNI EN 729-2:1996.
+            </p>
+          </div>
         </section>
-        
-        <section id="clientes" className="py-16 md:py-24 bg-card">
+
+        <section id="clientes" className="py-16 md:py-24">
           <div className="container mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold">Confían en Nosotros</h2>
@@ -373,9 +505,8 @@ export default function Home() {
                   <Image
                     src={image.src}
                     alt={image.alt}
-                    width={800}
-                    height={800}
-                    className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                     data-ai-hint={image.hint}
                   />
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors"></div>
@@ -388,8 +519,6 @@ export default function Home() {
           </div>
         </section>
 
-        <PuntalesDestacados />
-        
         <section id="nosotros" className="py-16 md:py-24 bg-card">
           <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-in fade-in-0 slide-in-from-left-12 duration-500">
@@ -412,7 +541,7 @@ export default function Home() {
                     alt="Trabajadores en obra"
                     width={600}
                     height={450}
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-72 md:h-96"
                     data-ai-hint="construction workers"
                   />
             </div>
@@ -463,7 +592,46 @@ export default function Home() {
         </section>
 
 
-        <section id="contacto" className="py-16 md:py-24 text-center bg-gradient-to-r from-primary to-orange-400 text-white">
+        <section id="accesorios" className="py-16 md:py-24 bg-card">
+            <div className="container mx-auto">
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                    <h2 className="text-3xl lg:text-4xl font-bold">Completa tu Equipo con Nuestros Accesorios</h2>
+                    <p className="text-muted-foreground mt-4 text-lg">
+                        Desde juntas de alta resistencia hasta vigas y moños, tenemos todo lo necesario para asegurar la máxima versatilidad y seguridad en tu obra.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {featuredProducts.map((product, index) => (
+                        <Card key={index} className="overflow-hidden bg-background shadow-md hover:shadow-primary/20 transition-all duration-300 flex flex-col group transform hover:-translate-y-1">
+                            <CardHeader className="p-0 bg-white">
+                                <div className="relative w-full aspect-[3/2]">
+                                    <Image
+                                        src={product.image}
+                                        alt={product.name}
+                                        fill
+                                        className="object-contain p-6"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                        data-ai-hint={product.hint}
+                                    />
+                                </div>
+                            </CardHeader>
+                            <CardContent className="p-6 flex flex-col flex-grow">
+                                <div className="flex items-start gap-4 mb-3">
+                                    <product.icon className="w-8 h-8 text-primary mt-1 flex-shrink-0" />
+                                    <h3 className="text-xl font-bold">{product.name}</h3>
+                                </div>
+                                <CardDescription className="mb-6 flex-grow">{product.description}</CardDescription>
+                                <Button onClick={() => setIsModalOpen(true)} variant="outline" className="w-full mt-auto group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-colors">
+                                    Solicitar Cotización
+                                </Button>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" className="py-16 md:py-24 text-center bg-primary text-white">
           <div className="container mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold">¿Listo para Optimizar tu Obra?</h2>
             <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto">
@@ -480,6 +648,70 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section id="formulario" className="py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold">Solicita tu Cotización por WhatsApp</h2>
+              <p className="text-muted-foreground mt-4 text-lg">
+                Llena el formulario y recibe atención inmediata. Tu información se envía directo a nuestro WhatsApp.
+              </p>
+            </div>
+            <form onSubmit={handleWhatsAppFormSubmit} className="max-w-3xl mx-auto bg-card border border-border/50 rounded-xl shadow-lg p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="nombre">Nombre completo *</Label>
+                <Input id="nombre" name="nombre" required placeholder="Ej. Juan Pérez" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="telefono">Teléfono *</Label>
+                <Input id="telefono" name="telefono" type="tel" required placeholder="Ej. 55 1234 5678" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="empresa">Empresa (opcional)</Label>
+                <Input id="empresa" name="empresa" placeholder="Ej. Constructora XYZ" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="producto">Producto de interés *</Label>
+                <select
+                  id="producto"
+                  name="producto"
+                  required
+                  defaultValue=""
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="" disabled>Selecciona un producto</option>
+                  <option>Puntal Ligero 1.80-3.20</option>
+                  <option>Puntal Ligero 2.20-4.00</option>
+                  <option>Puntal B40 2.31-4.00 (Reforzado)</option>
+                  <option>Puntal B50 2.81-5.00 (Extra Fuerte)</option>
+                  <option>Accesorios para cimbra</option>
+                  <option>Viga H-20</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="cantidad">Cantidad aproximada</Label>
+                <Input id="cantidad" name="cantidad" placeholder="Ej. 100 piezas" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="ubicacion">Ubicación de la obra</Label>
+                <Input id="ubicacion" name="ubicacion" placeholder="Ej. Iztacalco, CDMX" />
+              </div>
+              <div className="space-y-2 md:col-span-2">
+                <Label htmlFor="mensaje">Mensaje adicional</Label>
+                <Textarea id="mensaje" name="mensaje" rows={4} placeholder="Cuéntanos más sobre tu proyecto o si necesitas entrega urgente..." />
+              </div>
+              <div className="md:col-span-2">
+                <Button type="submit" size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white">
+                  <WhatsAppIcon className="mr-2 h-5 w-5" /> Enviar por WhatsApp
+                </Button>
+                <p className="text-xs text-muted-foreground text-center mt-3">
+                  Al enviar se abrirá WhatsApp con tu información lista para mandarnos.
+                </p>
+              </div>
+            </form>
+          </div>
+        </section>
       </main>
 
       <footer className="bg-card text-secondary-foreground border-t border-border/50">
@@ -487,7 +719,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-start">
             <div className="md:col-span-1">
                <Image src="/images/Recurso-2.png.webp" alt="DFAC Accesorios para Cimbras Logo" width={180} height={40} className="h-10 w-auto mx-auto md:mx-0" />
-              <p className="text-sm mt-4 text-muted-foreground">Cuauhtémoc 105, San Pedro Iztacalco, Iztacalco, 08220 Ciudad de México, CDMX</p>
+              <a href="https://share.google/hwzR1S3CALFM9tOW" target="_blank" rel="noopener noreferrer" className="text-sm mt-4 text-muted-foreground hover:text-primary transition-colors block">Cuauhtémoc 105, San Pedro Iztacalco, Iztacalco, 08220 Ciudad de México, CDMX</a>
               <p className="text-sm text-muted-foreground">ventas@cimbrayaccesorios.com.mx</p>
             </div>
             <div>
@@ -556,7 +788,26 @@ export default function Home() {
             }
           }}>
             <WhatsAppIcon className="h-7 w-7 text-white" />
-            <span className="sr-only">Contactar por WhatsApp</span>
+            <span className="sr-only">Contactar por WhatsApp (línea 1)</span>
+          </a>
+        </Button>
+        <Button
+          asChild
+          className={cn(
+            "rounded-full shadow-lg p-4 h-16 w-16 bg-green-500 hover:bg-green-600"
+          )}
+        >
+          <a href="https://wa.me/5215519538328?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización." target="_blank" rel="noopener noreferrer" onClick={(e) => {
+            e.preventDefault();
+            const url = "https://wa.me/5215519538328?text=Hola,%20me%20gustaría%20solicitar%20una%20cotización.";
+            if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+              (window as any).gtag_report_conversion(url);
+            } else {
+              window.open(url, '_blank');
+            }
+          }}>
+            <WhatsAppIcon className="h-7 w-7 text-white" />
+            <span className="sr-only">Contactar por WhatsApp (línea 2)</span>
           </a>
         </Button>
         <Button

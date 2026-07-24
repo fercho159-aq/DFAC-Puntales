@@ -41,7 +41,21 @@ export function UrgentMaterialModal({ isOpen, onOpenChange }: UrgentMaterialModa
           }}>
             <span className="flex items-center justify-center gap-3">
               <WhatsAppIcon className="h-5 w-5" />
-              Contactar por WhatsApp
+              Contactar por WhatsApp (línea 1)
+            </span>
+          </Button>
+          <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white" onClick={(e) => {
+            e.preventDefault();
+            const url = "https://wa.me/5215519538328?text=Hola,%20necesito%20material%20urgente.";
+            if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+              (window as any).gtag_report_conversion(url);
+            } else {
+              window.open(url, '_blank');
+            }
+          }}>
+            <span className="flex items-center justify-center gap-3">
+              <WhatsAppIcon className="h-5 w-5" />
+              Contactar por WhatsApp (línea 2)
             </span>
           </Button>
           <Button asChild size="lg" className="w-full">

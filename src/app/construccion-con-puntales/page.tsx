@@ -43,11 +43,11 @@ const beneficios = [
 
 const modelos = [
   {
-    nombre: 'Puntal Ligero 1.80 – 3.20 m',
+    nombre: 'Puntal Ligero 1.80 – 3.00 m',
     imagen: '/images/puntales/ligero-180-320.jpg',
     specs: [
-      'Altura: 1.80 a 3.20 m',
-      'Carga máxima: 2,800 kg',
+      'Altura: 1.80 a 3.00 m',
+      'Carga máxima: 2,639 kg',
       'Tubos: Ø 60 / Ø 48 mm',
       'Placas: 120 × 120 × 4.5 mm',
       'Acero S235 JR · UNE-EN 1065',
@@ -58,7 +58,7 @@ const modelos = [
     imagen: '/images/puntales/ligero-220-400.jpg',
     specs: [
       'Altura: 2.20 a 4.00 m',
-      'Carga máxima: 2,200 kg',
+      'Carga máxima: 2,313 kg',
       'Tubos: Ø 60 / Ø 56 mm',
       'Placas: 120 × 120 × 4.5 mm',
       'Acero S235 JR · UNE-EN 1065',
@@ -69,7 +69,7 @@ const modelos = [
     imagen: '/images/puntales/b40-231-400.jpg',
     specs: [
       'Altura: 2.31 a 4.00 m',
-      'Carga máxima: 3,500 kg',
+      'Carga máxima: 3,059 kg',
       'Tubos: Ø 56 / Ø 48.3 mm',
       'Placas: 120 × 120 × 4.5 mm',
       'Acero S235 JR · UNE-EN 1065',
@@ -80,7 +80,7 @@ const modelos = [
     imagen: '/images/puntales/b50-281-500.jpg',
     specs: [
       'Altura: 2.81 a 5.00 m',
-      'Carga máxima: 4,000 kg',
+      'Carga máxima: 2,518 kg',
       'Tubos: Ø 60 / Ø 48 mm',
       'Placas: 120 × 120 × 6 mm',
       'Acero S355 JR · UNE-EN 1065',
@@ -93,8 +93,8 @@ const especificacionesTecnicas = [
     nombre: 'Puntal Telescópico 1.80 – 3.00 m',
     fabricacion: 'Fabricado bajo norma europea en Italia',
     altura: '1.80 a 3.00 m',
-    resistenciaMin: { altura: '1.80 m', carga: '1,800 kg' },
-    resistenciaMax: { altura: '3.00 m', carga: '801 kg' },
+    resistenciaMin: { altura: '1.80 m', carga: '2,639 kg' },
+    resistenciaMax: { altura: '3.00 m', carga: '1,020 kg' },
     tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
     tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
     base: '120 × 120 × 4.5 mm',
@@ -104,8 +104,8 @@ const especificacionesTecnicas = [
     nombre: 'Puntal Telescópico 2.20 – 4.00 m',
     fabricacion: 'Fabricado bajo norma europea en Italia',
     altura: '2.20 a 4.00 m',
-    resistenciaMin: { altura: '2.20 m', carga: '1,800 kg' },
-    resistenciaMax: { altura: '4.00 m', carga: '758 kg' },
+    resistenciaMin: { altura: '2.30 m', carga: '2,313 kg' },
+    resistenciaMax: { altura: '4.00 m', carga: '765 kg' },
     tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
     tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
     base: '120 × 120 × 4.5 mm',
@@ -115,8 +115,8 @@ const especificacionesTecnicas = [
     nombre: 'Puntal B50 2.80 – 5.00 m',
     fabricacion: 'Fabricado bajo norma europea en Italia',
     altura: '2.80 a 5.00 m',
-    resistenciaMin: { altura: '2.80 m', carga: '1,800 kg' },
-    resistenciaMax: { altura: '5.00 m', carga: '300 kg' },
+    resistenciaMin: { altura: '2.80 m', carga: '2,518 kg' },
+    resistenciaMax: { altura: '5.00 m', carga: '612 kg' },
     tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
     tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
     base: '120 × 120 × 4.5 mm',
@@ -126,8 +126,8 @@ const especificacionesTecnicas = [
     nombre: 'Puntal B40 de Placa 2.31 – 4.00 m',
     fabricacion: 'Fabricado bajo norma UNI EN 729-2 en Italia',
     altura: '2.31 a 4.00 m',
-    resistenciaMin: { altura: '2.31 m', carga: '3,059 kg' },
-    resistenciaMax: { altura: '4.00 m', carga: '1,019 kg' },
+    resistenciaMin: { altura: '2.30 m', carga: '3,059 kg' },
+    resistenciaMax: { altura: '4.00 m', carga: '1,020 kg' },
     tuboInterior: 'Ø 48.30 mm',
     tuboExterior: 'Ø 56.00 mm',
     base: '120 × 120 × 4.5 mm',
@@ -373,7 +373,7 @@ export default function ConstruccionConPuntalesPage() {
               </div>
               <div className="p-4 rounded-lg bg-secondary/40">
                 <Weight className="w-6 h-6 text-primary mx-auto" />
-                <p className="mt-2 font-bold">Hasta 4,000 kg</p>
+                <p className="mt-2 font-bold">Hasta 3,059 kg</p>
                 <p className="text-xs text-muted-foreground">de carga</p>
               </div>
               <div className="p-4 rounded-lg bg-secondary/40">

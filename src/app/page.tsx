@@ -75,8 +75,8 @@ const especificacionesTecnicas = [
     nombre: 'Puntal Telescópico 1.80 – 3.00 m',
     fabricacion: 'Fabricado bajo norma europea en Italia',
     altura: '1.80 a 3.00 m',
-    resistenciaMin: { altura: '1.80 m', carga: '1,800 kg' },
-    resistenciaMax: { altura: '3.00 m', carga: '801 kg' },
+    resistenciaMin: { altura: '1.80 m', carga: '2,639 kg' },
+    resistenciaMax: { altura: '3.00 m', carga: '1,020 kg' },
     tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
     tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
     base: '120 × 120 × 4.5 mm',
@@ -86,8 +86,8 @@ const especificacionesTecnicas = [
     nombre: 'Puntal Telescópico 2.20 – 4.00 m',
     fabricacion: 'Fabricado bajo norma europea en Italia',
     altura: '2.20 a 4.00 m',
-    resistenciaMin: { altura: '2.20 m', carga: '1,800 kg' },
-    resistenciaMax: { altura: '4.00 m', carga: '758 kg' },
+    resistenciaMin: { altura: '2.30 m', carga: '2,313 kg' },
+    resistenciaMax: { altura: '4.00 m', carga: '765 kg' },
     tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
     tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
     base: '120 × 120 × 4.5 mm',
@@ -97,8 +97,8 @@ const especificacionesTecnicas = [
     nombre: 'Puntal B50 2.80 – 5.00 m',
     fabricacion: 'Fabricado bajo norma europea en Italia',
     altura: '2.80 a 5.00 m',
-    resistenciaMin: { altura: '2.80 m', carga: '1,800 kg' },
-    resistenciaMax: { altura: '5.00 m', carga: '300 kg' },
+    resistenciaMin: { altura: '2.80 m', carga: '2,518 kg' },
+    resistenciaMax: { altura: '5.00 m', carga: '612 kg' },
     tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
     tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
     base: '120 × 120 × 4.5 mm',
@@ -108,8 +108,8 @@ const especificacionesTecnicas = [
     nombre: 'Puntal B40 de Placa 2.31 – 4.00 m',
     fabricacion: 'Fabricado bajo norma UNI EN 729-2 en Italia',
     altura: '2.31 a 4.00 m',
-    resistenciaMin: { altura: '2.31 m', carga: '3,059 kg' },
-    resistenciaMax: { altura: '4.00 m', carga: '1,019 kg' },
+    resistenciaMin: { altura: '2.30 m', carga: '3,059 kg' },
+    resistenciaMax: { altura: '4.00 m', carga: '1,020 kg' },
     tuboInterior: 'Ø 48.30 mm',
     tuboExterior: 'Ø 56.00 mm',
     base: '120 × 120 × 4.5 mm',
@@ -709,7 +709,7 @@ export default function Home() {
                   className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   <option value="" disabled>Selecciona un producto</option>
-                  <option>Puntal Ligero 1.80-3.20</option>
+                  <option>Puntal Ligero 1.80-3.00</option>
                   <option>Puntal Ligero 2.20-4.00</option>
                   <option>Puntal B40 2.31-4.00 (Reforzado)</option>
                   <option>Puntal B50 2.81-5.00 (Extra Fuerte)</option>

@@ -94,10 +94,10 @@ const especificacionesTecnicas = [
     peso: '11.00 kg (24.25 lb)',
   },
   {
-    nombre: 'Puntal Telescópico 3.20 – 5.00 m',
+    nombre: 'Puntal B50 2.80 – 5.00 m',
     fabricacion: 'Fabricado bajo norma europea en Italia',
-    altura: '3.20 a 5.00 m',
-    resistenciaMin: { altura: '3.20 m', carga: '1,800 kg' },
+    altura: '2.80 a 5.00 m',
+    resistenciaMin: { altura: '2.80 m', carga: '1,800 kg' },
     resistenciaMax: { altura: '5.00 m', carga: '300 kg' },
     tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
     tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',

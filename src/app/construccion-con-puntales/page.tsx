@@ -90,11 +90,11 @@ const modelos = [
 
 const especificacionesTecnicas = [
   {
-    nombre: 'Puntal Telescópico 2.00 – 3.60 m',
+    nombre: 'Puntal Telescópico 1.80 – 3.00 m',
     fabricacion: 'Fabricado bajo norma europea en Italia',
-    altura: '2.00 a 3.60 m',
-    resistenciaMin: { altura: '2.00 m', carga: '1,800 kg' },
-    resistenciaMax: { altura: '3.60 m', carga: '801 kg' },
+    altura: '1.80 a 3.00 m',
+    resistenciaMin: { altura: '1.80 m', carga: '1,800 kg' },
+    resistenciaMax: { altura: '3.00 m', carga: '801 kg' },
     tuboInterior: 'Ø 48.30 mm · espesor 1.8/2.0 mm',
     tuboExterior: 'Ø 56.00 mm · espesor 1.8 mm',
     base: '120 × 120 × 4.5 mm',

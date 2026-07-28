@@ -273,7 +273,7 @@ export default function Home() {
       <header className="py-4 px-4 md:px-8 border-b border-border/40 bg-background/80 backdrop-blur-lg sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
           <a href="#inicio" onClick={(e) => handleNavLinkClick(e, '#inicio')} className="flex items-center gap-3">
-            <Image src="/images/Recurso-2.png.webp" alt="DFAC Accesorios para Cimbras Logo" width={180} height={40} className="h-10 w-auto" />
+            <Image src="/images/dfac-logo.png" alt="DFAC Accesorios para Cimbras Logo" width={256} height={112} className="h-10 w-auto" />
             <span className="sr-only">DFAC Accesorios para Cimbras</span>
           </a>
           <nav className="hidden lg:flex items-center gap-6">
@@ -556,7 +556,7 @@ export default function Home() {
                 Utiliza nuestra herramienta interactiva para seleccionar el modelo que necesitas. Ajusta la altura y descubre al instante la capacidad de carga. ¡Obtener una cotización nunca fue tan fácil!
               </p>
             </div>
-            <PuntalSelector />
+            <PuntalSelector onCtaClick={() => setIsModalOpen(true)} />
           </div>
         </section>
         
@@ -718,7 +718,7 @@ export default function Home() {
         <div className="container mx-auto py-12 px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-start">
             <div className="md:col-span-1">
-               <Image src="/images/Recurso-2.png.webp" alt="DFAC Accesorios para Cimbras Logo" width={180} height={40} className="h-10 w-auto mx-auto md:mx-0" />
+               <Image src="/images/dfac-logo.png" alt="DFAC Accesorios para Cimbras Logo" width={256} height={112} className="h-10 w-auto mx-auto md:mx-0" />
               <a href="https://share.google/hwzR1S3CALFM9tOW" target="_blank" rel="noopener noreferrer" className="text-sm mt-4 text-muted-foreground hover:text-primary transition-colors block">Cuauhtémoc 105, San Pedro Iztacalco, Iztacalco, 08220 Ciudad de México, CDMX</a>
               <p className="text-sm text-muted-foreground">ventas@cimbrayaccesorios.com.mx</p>
             </div>
@@ -762,6 +762,17 @@ export default function Home() {
                 </a>
               </div>
             </div>
+          </div>
+          <div className="mt-10 rounded-lg overflow-hidden border border-border/50 h-[300px]">
+            <iframe
+              title="Ubicación de DFAC en Google Maps"
+              src="https://maps.google.com/maps?q=Cuauht%C3%A9moc%20105%2C%20San%20Pedro%20Iztacalco%2C%20Iztacalco%2C%2008220%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX&z=15&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
           <div className="text-center text-xs text-muted-foreground mt-10 border-t border-border/50 pt-6">
             <p>&copy; {new Date().getFullYear()} DFAC. Todos los derechos reservados. | <a href="#" className="hover:text-primary">Aviso de Privacidad</a></p>

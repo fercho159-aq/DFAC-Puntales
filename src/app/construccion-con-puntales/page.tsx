@@ -160,7 +160,7 @@ export default function ConstruccionConPuntalesPage() {
       <header className="sticky top-0 z-40 bg-background/95 backdrop-blur border-b">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/">
-            <Image src="/images/dfac-logo.png" alt="DFAC Accesorios para Cimbras Logo" width={256} height={112} className="h-10 w-auto" />
+            <Image src="/images/dfac-logo.webp" alt="DFAC Accesorios para Cimbras Logo" width={393} height={134} className="h-10 w-auto" />
           </Link>
           <Link href="/" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
             <ArrowLeft className="h-4 w-4" /> Volver al inicio

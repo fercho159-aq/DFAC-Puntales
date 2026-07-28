@@ -277,7 +277,7 @@ export default function Home() {
       <header className="py-4 px-4 md:px-8 border-b border-border/40 bg-background/80 backdrop-blur-lg sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
           <a href="#inicio" onClick={(e) => handleNavLinkClick(e, '#inicio')} className="flex items-center gap-3">
-            <Image src="/images/dfac-logo.png" alt="DFAC Accesorios para Cimbras Logo" width={256} height={112} className="h-10 w-auto" />
+            <Image src="/images/dfac-logo.webp" alt="DFAC Accesorios para Cimbras Logo" width={393} height={134} className="h-10 w-auto" />
             <span className="sr-only">DFAC Accesorios para Cimbras</span>
           </a>
           <nav className="hidden lg:flex items-center gap-6">
@@ -732,7 +732,7 @@ export default function Home() {
         <div className="container mx-auto py-12 px-4 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left items-start">
             <div className="md:col-span-1">
-               <Image src="/images/dfac-logo.png" alt="DFAC Accesorios para Cimbras Logo" width={256} height={112} className="h-10 w-auto mx-auto md:mx-0" />
+               <Image src="/images/dfac-logo.webp" alt="DFAC Accesorios para Cimbras Logo" width={393} height={134} className="h-10 w-auto mx-auto md:mx-0" />
               <a href="https://share.google/hwzR1S3CALFM9tOW" target="_blank" rel="noopener noreferrer" className="text-sm mt-4 text-muted-foreground hover:text-primary transition-colors block">Cuauhtémoc 105, San Pedro Iztacalco, Iztacalco, 08220 Ciudad de México, CDMX</a>
               <p className="text-sm text-muted-foreground">ventas@cimbrayaccesorios.com.mx</p>
               <div className="mt-4 rounded-lg overflow-hidden border border-border/50 h-[180px]">

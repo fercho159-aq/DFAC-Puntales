@@ -127,10 +127,12 @@ export default function PuntalSelector({ onCtaClick }: PuntalSelectorProps) {
       const sortedTable = [...model.loadTable].sort((a, b) => a.height - b.height);
       
       // Find the first load entry where the height is sufficient
-      let applicableLoad = sortedTable[sortedTable.length - 1]?.load || 0;
+      // Load holds steady within each 10 cm bracket and drops at the next mark
+      let applicableLoad = sortedTable[0]?.load || 0;
       for (let i = 0; i < sortedTable.length; i++) {
-        if (height <= sortedTable[i].height) {
+        if (height >= sortedTable[i].height) {
           applicableLoad = sortedTable[i].load;
+        } else {
           break;
         }
       }
@@ -268,8 +270,8 @@ export default function PuntalSelector({ onCtaClick }: PuntalSelectorProps) {
               </TableHeader>
               <TableBody>
                 {currentModel.loadTable.map((entry) => (
-                  <TableRow key={entry.height} className={cn(currentHeight <= entry.height && maxLoad === entry.load ? "bg-primary/10 font-bold" : "")}>
-                    <TableCell>Hasta {entry.height}</TableCell>
+                  <TableRow key={entry.height} className={cn(currentHeight >= entry.height && maxLoad === entry.load ? "bg-primary/10 font-bold" : "")}>
+                    <TableCell>{entry.height}</TableCell>
                     <TableCell className="text-right">{entry.load.toLocaleString('es-ES')}</TableCell>
                   </TableRow>
                 ))}

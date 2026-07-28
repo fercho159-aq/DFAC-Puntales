@@ -104,6 +104,17 @@ const especificacionesTecnicas = [
     base: '120 × 120 × 4.5 mm',
     peso: '14.00 kg (30.86 lb)',
   },
+  {
+    nombre: 'Puntal B40 de Placa 2.31 – 4.00 m',
+    fabricacion: 'Fabricado bajo norma UNI EN 729-2 en Italia',
+    altura: '2.31 a 4.00 m',
+    resistenciaMin: { altura: '2.31 m', carga: '3,059 kg' },
+    resistenciaMax: { altura: '4.00 m', carga: '1,019 kg' },
+    tuboInterior: 'Ø 48.30 mm',
+    tuboExterior: 'Ø 56.00 mm',
+    base: '120 × 120 × 4.5 mm',
+    peso: '—',
+  },
 ];
 
 const certificaciones = [

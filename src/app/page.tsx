@@ -369,7 +369,7 @@ export default function Home() {
                           <ArrowRight className="mr-2 h-5 w-5"/> Iniciar Cotización
                       </Button>
                       <Button size="lg" variant="outline" className="bg-transparent text-white border-white/80 hover:bg-white hover:text-primary" onClick={() => {
-                        const el = document.getElementById('puntales-destacados');
+                        const el = document.getElementById('catalogo');
                         if (el) el.scrollIntoView({ behavior: 'smooth' });
                       }}>
                            Ver Catálogo

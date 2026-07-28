@@ -29,6 +29,7 @@ import { PuntalesDestacados } from '@/components/puntales-destacados';
 const navLinks = [
   { href: '#inicio', label: 'Inicio' },
   { href: '#puntales-destacados', label: 'Puntales' },
+  { href: '#modelos', label: 'Calculadora' },
   { href: '#accesorios', label: 'Accesorios' },
   { href: '#beneficios', label: 'Beneficios' },
   { href: '#galeria', label: 'Galería' },
@@ -548,7 +549,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="modelos" className="py-16 md:py-24 hidden">
+        <section id="modelos" className="py-16 md:py-24">
           <div className="container mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold">Encuentra y Cotiza tu Puntal Ideal</h2>

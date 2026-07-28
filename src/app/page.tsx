@@ -20,7 +20,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
 import Autoplay from "embla-carousel-autoplay";
-import { FacebookIcon } from '@/components/icons';
+import { FacebookIcon, TikTokIcon } from '@/components/icons';
 import { Instagram } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Flipbook } from '@/components/flipbook';
@@ -315,6 +315,10 @@ export default function Home() {
                 <a href="https://www.instagram.com/dfac_cimbra/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Instagram className="h-6 w-6" />
                   <span className="sr-only">Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@accesorios.dfac" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <TikTokIcon className="h-6 w-6" />
+                  <span className="sr-only">TikTok</span>
                 </a>
               </div>
             </nav>
@@ -784,6 +788,10 @@ export default function Home() {
                 <a href="https://www.instagram.com/dfac_cimbra/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                   <Instagram className="h-6 w-6" />
                   <span className="sr-only">Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@accesorios.dfac" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  <TikTokIcon className="h-6 w-6" />
+                  <span className="sr-only">TikTok</span>
                 </a>
               </div>
             </div>

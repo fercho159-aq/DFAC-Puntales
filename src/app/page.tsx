@@ -246,7 +246,7 @@ export default function Home() {
         setIsUrgentModalOpen(true);
         sessionStorage.setItem('urgentModalShown', 'true');
       }
-    }, 3000); // 3 seconds delay
+    }, 10000); // 10 seconds delay
 
     return () => clearTimeout(timer);
   }, []);

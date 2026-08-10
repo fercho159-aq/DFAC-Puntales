@@ -871,8 +871,8 @@ export default function Home() {
       {expandedImage && (
         <div className="fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4 cursor-pointer" onClick={() => setExpandedImage(null)}>
           <button className="absolute top-4 right-4 text-white text-4xl font-bold z-[101] hover:text-gray-300" onClick={() => setExpandedImage(null)}>&times;</button>
-          <div className="relative w-full max-w-3xl max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
-            <Image src={expandedImage} alt="Producto ampliado" fill className="object-contain" sizes="90vw" />
+          <div onClick={(e) => e.stopPropagation()}>
+            <img src={expandedImage} alt="Producto ampliado" className="max-w-[90vw] max-h-[85vh] object-contain" />
           </div>
         </div>
       )}

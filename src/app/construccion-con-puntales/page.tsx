@@ -77,7 +77,7 @@ const modelos = [
   },
   {
     nombre: 'Puntal B50 2.81 – 5.00 m (Extra Fuerte)',
-    imagen: '/images/puntales/b50-281-500.jpg',
+    imagen: '/images/puntales/b40-231-400.jpg',
     specs: [
       'Altura: 2.81 a 5.00 m',
       'Carga máxima: 2,518 kg',
@@ -209,7 +209,7 @@ export default function ConstruccionConPuntalesPage() {
           </div>
           <div className="relative h-[340px] md:h-[420px] bg-white rounded-xl shadow-lg overflow-hidden">
             <Image
-              src="/images/puntales/b50-281-500.jpg"
+              src="/images/puntales/b40-231-400.jpg"
               alt="Puntal metálico extensible DFAC"
               fill
               className="object-contain p-8"

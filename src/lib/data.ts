@@ -112,7 +112,7 @@ export const puntalesData: Puntal[] = [
   },
   {
     id: "b50-280-500",
-    image: "/images/puntales/b50-281-500.jpg",
+    image: "/images/puntales/b40-231-400.jpg",
     model: "B50 2.80-5.00 (Extra Fuerte)",
     modelSrc: "/models/model.glb",
     dataAiHint: "extra strong prop",

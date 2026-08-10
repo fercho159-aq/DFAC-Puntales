@@ -238,6 +238,7 @@ export default function Home() {
   const catalogPdfUrl = "/archivos/CATALOGO-2026.pdf";
   const [isUrgentModalOpen, setIsUrgentModalOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [expandedImage, setExpandedImage] = useState<string | null>(null);
   
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -622,7 +623,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {featuredProducts.map((product, index) => (
                         <Card key={index} className="overflow-hidden bg-background shadow-md hover:shadow-primary/20 transition-all duration-300 flex flex-col group transform hover:-translate-y-1">
-                            <CardHeader className="p-0 bg-white">
+                            <CardHeader className="p-0 bg-white cursor-pointer" onClick={() => setExpandedImage(product.image)}>
                                 <div className="relative w-full aspect-[3/2]">
                                     <Image
                                         src={product.image}
@@ -866,6 +867,15 @@ export default function Home() {
           </a>
         </Button>
       </div>
+
+      {expandedImage && (
+        <div className="fixed inset-0 bg-black/80 z-[100] flex items-center justify-center p-4 cursor-pointer" onClick={() => setExpandedImage(null)}>
+          <button className="absolute top-4 right-4 text-white text-4xl font-bold z-[101] hover:text-gray-300" onClick={() => setExpandedImage(null)}>&times;</button>
+          <div className="relative w-full max-w-3xl max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+            <Image src={expandedImage} alt="Producto ampliado" fill className="object-contain" sizes="90vw" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

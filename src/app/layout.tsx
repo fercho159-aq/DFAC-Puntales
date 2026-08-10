@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'DFAC Accesorios para Cimbras – Selector de Puntales',
   description: 'Selector Interactivo de Puntales de Acero para Construcción. Encuentra el modelo y la carga máxima para tu proyecto.',
   keywords: ['puntales', 'cimbras', 'construcción', 'accesorios', 'DFAC', 'carga máxima'],
+  verification: {
+    google: 'hFKKVqkD3MYzeJKgCa8TCDdQj8JO1NN1RZJcY8TzDqA',
+  },
 };
 
 export default function RootLayout({

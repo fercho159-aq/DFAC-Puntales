@@ -37,6 +37,7 @@ const navLinks = [
   { href: '#galeria', label: 'Galería' },
   { href: '#nosotros', label: 'Nosotros' },
   { href: '#formulario', label: 'Cotizador' },
+  { href: '/blog', label: 'Blog' },
   { href: '#contacto', label: 'Contacto' },
 ];
 
@@ -293,11 +294,17 @@ export default function Home() {
             <span className="sr-only">DFAC Accesorios para Cimbras</span>
           </a>
           <nav className="hidden lg:flex items-center gap-6">
-            {navLinks.map(link => (
-              <a key={link.href} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map(link =>
+              link.href.startsWith('#') ? (
+                <a key={link.href} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                  {link.label}
+                </a>
+              ) : (
+                <a key={link.href} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                  {link.label}
+                </a>
+              )
+            )}
           </nav>
           <div className="flex items-center gap-4">
             <Button onClick={() => setIsModalOpen(true)} className="hidden sm:inline-flex" variant="outline">
@@ -311,11 +318,17 @@ export default function Home() {
         {isMenuOpen && (
           <div className="lg:hidden mt-4 bg-background/95 p-4 rounded-md">
             <nav className="flex flex-col gap-4">
-              {navLinks.map(link => (
-                <a key={link.href} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-base font-medium text-foreground hover:text-primary transition-colors py-2">
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map(link =>
+                link.href.startsWith('#') ? (
+                  <a key={link.href} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-base font-medium text-foreground hover:text-primary transition-colors py-2">
+                    {link.label}
+                  </a>
+                ) : (
+                  <a key={link.href} href={link.href} className="text-base font-medium text-foreground hover:text-primary transition-colors py-2">
+                    {link.label}
+                  </a>
+                )
+              )}
               <Button onClick={() => setIsModalOpen(true)} className="w-full mt-4">
                 Solicitar Cotización
               </Button>
@@ -766,11 +779,17 @@ export default function Home() {
             <div>
                <h3 className="font-bold text-lg mb-4 text-primary">Enlaces Rápidos</h3>
                <nav className="flex flex-col gap-2">
-                 {navLinks.map(link => (
-                   <a key={link.href} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                     {link.label}
-                   </a>
-                 ))}
+                 {navLinks.map(link =>
+                   link.href.startsWith('#') ? (
+                     <a key={link.href} href={link.href} onClick={(e) => handleNavLinkClick(e, link.href)} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                       {link.label}
+                     </a>
+                   ) : (
+                     <a key={link.href} href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                       {link.label}
+                     </a>
+                   )
+                 )}
                </nav>
             </div>
             <div>

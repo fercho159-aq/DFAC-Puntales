@@ -5,11 +5,21 @@ import { cn } from '@/lib/utils';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'DFAC Accesorios para Cimbras – Selector de Puntales',
-  description: 'Selector Interactivo de Puntales de Acero para Construcción. Encuentra el modelo y la carga máxima para tu proyecto.',
-  keywords: ['puntales', 'cimbras', 'construcción', 'accesorios', 'DFAC', 'carga máxima'],
+  metadataBase: new URL('https://puntales.com.mx'),
+  title: {
+    default: 'Puntales Metálicos para Construcción en CDMX | DFAC',
+    template: '%s | DFAC Puntales',
+  },
+  description: 'Venta y renta de puntales metálicos certificados para construcción en CDMX y Zona Metropolitana. 4 modelos: ligeros, reforzados y extra fuertes. Entrega en 24 horas.',
+  keywords: ['puntales', 'puntales metalicos', 'puntales para construccion', 'renta de puntales', 'cimbra', 'CDMX', 'DFAC'],
   verification: {
     google: 'hFKKVqkD3MYzeJKgCa8TCDdQj8JO1NN1RZJcY8TzDqA',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_MX',
+    siteName: 'DFAC Puntales',
+    description: 'Puntales metálicos certificados para construcción en CDMX. Venta y renta con entrega en 24 horas.',
   },
 };
 
@@ -21,6 +31,34 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'DFAC - Puntales Metálicos para Construcción',
+              description: 'Venta y renta de puntales metálicos certificados para construcción en CDMX y Zona Metropolitana.',
+              url: 'https://puntales.com.mx',
+              telephone: ['+525525989751', '+525541673745', '+525555715084'],
+              email: 'ventas@cimbrayaccesorios.com.mx',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Cuauhtémoc 105, San Pedro Iztacalco',
+                addressLocality: 'Iztacalco',
+                addressRegion: 'Ciudad de México',
+                postalCode: '08220',
+                addressCountry: 'MX',
+              },
+              openingHoursSpecification: {
+                '@type': 'OpeningHoursSpecification',
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                opens: '09:00',
+                closes: '18:00',
+              },
+            }),
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />

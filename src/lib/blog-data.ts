@@ -219,6 +219,226 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
+  {
+    slug: 'que-es-un-puntal-metalico-tipos-usos-capacidades',
+    title: '¿Qué es un puntal metálico? Tipos, usos y capacidades (guía 2026)',
+    description:
+      'Guía completa 2026 sobre puntales metálicos: definición, tipos (italiano, español, telescópico), capacidades de carga, alturas y para qué obra sirve cada uno. Datos técnicos reales de DFAC.',
+    date: '2026-11-02',
+    image: '/images/Galeria/puntales-almacen-1.jpeg',
+    metaTitle:
+      '¿Qué es un puntal metálico? Tipos y capacidades 2026 | DFAC Puntales',
+    metaDescription:
+      'Puntal metálico: qué es, tipos (italiano, español, telescópico B40/B50), capacidades de 1,500 a 3,500 kg y usos en obra. Guía DFAC para CDMX, Edomex y Querétaro.',
+    content: `
+      <p class="mb-4 text-lg bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+        <strong>En corto:</strong> Un puntal metálico es un elemento vertical de acero ajustable en altura que sostiene la cimbra durante el colado de losas, trabes y entrepisos. En México los más usados son el <strong>italiano</strong> (más ligero, 1.80–3.50 m) y el <strong>español</strong> (reforzado, 2.00–5.00 m), con capacidades de carga entre <strong>1,500 y 3,500 kg</strong> según modelo y altura.
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">¿Qué es exactamente un puntal metálico?</h2>
+      <p class="mb-4">
+        Un <strong>puntal metálico</strong> (también llamado puntal telescópico, puntal para cimbra o puntal de acero) es un elemento estructural temporal que transfiere al suelo la carga del concreto fresco mientras alcanza su resistencia. Está formado por un tubo exterior y uno interior que se ajustan con un pin de acero y una tuerca de regulación fina, permitiendo variar la altura cada 10 cm.
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Tipos de puntales metálicos usados en México</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border border-slate-200 rounded-lg text-sm">
+          <thead class="bg-slate-100">
+            <tr>
+              <th class="p-3 text-left">Tipo</th>
+              <th class="p-3 text-left">Altura típica</th>
+              <th class="p-3 text-left">Carga admisible</th>
+              <th class="p-3 text-left">Peso</th>
+              <th class="p-3 text-left">Uso recomendado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200"><td class="p-3 font-medium">Puntal italiano ligero</td><td class="p-3">1.80 – 3.00 m</td><td class="p-3">1,500 – 2,000 kg</td><td class="p-3">12 – 15 kg</td><td class="p-3">Vivienda, remodelación, entrepisos bajos</td></tr>
+            <tr class="border-t border-slate-200 bg-slate-50"><td class="p-3 font-medium">Puntal italiano estándar</td><td class="p-3">2.00 – 3.50 m</td><td class="p-3">2,000 – 2,500 kg</td><td class="p-3">15 – 18 kg</td><td class="p-3">Residencial medio, comercial pequeño</td></tr>
+            <tr class="border-t border-slate-200"><td class="p-3 font-medium">Puntal español B40</td><td class="p-3">2.50 – 4.00 m</td><td class="p-3">2,500 – 3,000 kg</td><td class="p-3">18 – 22 kg</td><td class="p-3">Edificios 3-5 niveles, naves ligeras</td></tr>
+            <tr class="border-t border-slate-200 bg-slate-50"><td class="p-3 font-medium">Puntal español B50 reforzado</td><td class="p-3">3.00 – 5.00 m</td><td class="p-3">3,000 – 3,500 kg</td><td class="p-3">22 – 28 kg</td><td class="p-3">Naves industriales, plazas, puentes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">¿Para qué sirve un puntal metálico en obra?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Sostener la cimbra</strong> durante el colado y fraguado de losas, trabes y entrepisos.</li>
+        <li><strong>Reapuntalar</strong> los niveles inferiores mientras el concreto alcanza su resistencia de diseño (típicamente 14–21 días).</li>
+        <li><strong>Estabilizar temporalmente</strong> elementos estructurales durante demoliciones controladas o remodelaciones.</li>
+        <li><strong>Sostener dalas, cornisas y voladizos</strong> en obras residenciales.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">¿Cuánto resiste un puntal metálico?</h2>
+      <p class="mb-4">
+        La <strong>capacidad real</strong> de un puntal <em>disminuye con la altura</em> por el fenómeno de pandeo. Un puntal español B50 extendido a 5.00 m resiste del orden de 1,500 kg, pero el mismo puntal a 2.50 m supera los 3,500 kg. Siempre verifica la <strong>tabla de carga del fabricante</strong> antes de calcular tu apuntalamiento.
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Preguntas frecuentes</h2>
+      <div class="space-y-4">
+        <div><p class="font-bold">¿Cuál es la diferencia entre puntal italiano y español?</p><p>El italiano es más ligero y pensado para alturas menores (hasta 3.50 m). El español es reforzado, llega a 5.00 m y soporta más carga. En CDMX el italiano domina obra residencial; el español se usa en comercial e industrial.</p></div>
+        <div><p class="font-bold">¿Se puede rentar o solo comprar?</p><p>Ambas opciones. En DFAC manejamos venta y renta; la renta conviene para obras menores a 4 meses o con picos de demanda.</p></div>
+        <div><p class="font-bold">¿Qué norma cumplen los puntales DFAC?</p><p>Nuestros puntales cumplen la referencia europea <strong>UNE-EN 1065</strong> de carga admisible y son compatibles con las Normas Técnicas Complementarias para Diseño y Construcción de Estructuras de Concreto de la CDMX.</p></div>
+        <div><p class="font-bold">¿Cuántos puntales necesito por m² de losa?</p><p>Como regla rápida: 1 puntal cada 0.9 a 1.2 m² para losa de 10–12 cm de espesor. En la nota técnica de la semana 4 publicaremos la fórmula completa.</p></div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg mt-8">
+        <p class="font-bold text-lg mb-2">¿Necesitas puntales en CDMX, Edomex o Querétaro?</p>
+        <p class="mb-4">Equipo técnico DFAC con más de 15 años asesorando obras en la Zona Metropolitana y el Bajío. Entrega en 24 h.</p>
+        <a href="${WA_CTA}" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">Cotizar por WhatsApp</a>
+      </div>
+    `,
+  },
+  {
+    slug: 'puntal-italiano-vs-espanol-diferencias-y-cual-elegir',
+    title: 'Puntal italiano vs. español: diferencias, carga y cuál elegir',
+    description:
+      'Comparativa técnica 2026 entre el puntal italiano y el español: altura, carga admisible, peso, precio y caso de uso. Guía para elegir correctamente según tu obra en CDMX, Edomex o Bajío.',
+    date: '2026-11-09',
+    image: '/images/Galeria/puntales-almacen-2.jpeg',
+    metaTitle:
+      'Puntal italiano vs. español: cuál elegir en 2026 | DFAC Puntales',
+    metaDescription:
+      'Diferencias entre puntal italiano y español: alturas de 1.80–5.00 m, cargas de 1,500–3,500 kg, peso y precio. Guía DFAC para elegir el correcto en CDMX y Querétaro.',
+    content: `
+      <p class="mb-4 text-lg bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+        <strong>En corto:</strong> El <strong>puntal italiano</strong> es más ligero (12–18 kg) y alcanza hasta 3.50 m; ideal para obra residencial y remodelación. El <strong>puntal español</strong> es reforzado (18–28 kg), llega hasta 5.00 m y soporta hasta 3,500 kg; indicado para edificios, naves y obra industrial. La elección depende de la <strong>altura de entrepiso</strong> y la <strong>carga de la losa</strong>.
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Tabla comparativa puntal italiano vs. español</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border border-slate-200 rounded-lg text-sm">
+          <thead class="bg-slate-100">
+            <tr>
+              <th class="p-3 text-left">Característica</th>
+              <th class="p-3 text-left">Puntal italiano</th>
+              <th class="p-3 text-left">Puntal español</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200"><td class="p-3 font-medium">Altura mínima</td><td class="p-3">1.80 m</td><td class="p-3">2.00 m</td></tr>
+            <tr class="border-t border-slate-200 bg-slate-50"><td class="p-3 font-medium">Altura máxima</td><td class="p-3">3.50 m</td><td class="p-3">5.00 m</td></tr>
+            <tr class="border-t border-slate-200"><td class="p-3 font-medium">Carga admisible típica</td><td class="p-3">1,500 – 2,500 kg</td><td class="p-3">2,500 – 3,500 kg</td></tr>
+            <tr class="border-t border-slate-200 bg-slate-50"><td class="p-3 font-medium">Peso</td><td class="p-3">12 – 18 kg</td><td class="p-3">18 – 28 kg</td></tr>
+            <tr class="border-t border-slate-200"><td class="p-3 font-medium">Diámetro exterior</td><td class="p-3">48 mm</td><td class="p-3">56–60 mm</td></tr>
+            <tr class="border-t border-slate-200 bg-slate-50"><td class="p-3 font-medium">Facilidad de manejo</td><td class="p-3">Alta (1 operario)</td><td class="p-3">Media (puede requerir 2)</td></tr>
+            <tr class="border-t border-slate-200"><td class="p-3 font-medium">Mejor uso</td><td class="p-3">Vivienda, locales, remodelación</td><td class="p-3">Edificios, naves, obra industrial</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">¿Cuándo elegir puntal italiano?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Entrepisos de <strong>2.40 a 3.20 m</strong> (la mayoría de la vivienda en CDMX).</li>
+        <li>Obras cortas o flotillas con <strong>rotación alta</strong> entre proyectos.</li>
+        <li>Trabajo donde pesa la <strong>maniobrabilidad</strong>: remodelación, colonias con acceso limitado como Roma, Condesa, Narvarte o Coyoacán centro.</li>
+        <li>Presupuestos ajustados: su costo es <strong>15–25 % menor</strong> que el español equivalente.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">¿Cuándo elegir puntal español?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Entrepisos <strong>mayores a 3.50 m</strong>: edificios en Santa Fe, Interlomas, Polanco, Querétaro norte.</li>
+        <li>Losas con espesor <strong>mayor a 15 cm</strong> o con carga viva alta (naves industriales, bodegas, estacionamientos).</li>
+        <li>Obras con <strong>plan de reapuntalamiento</strong> extendido, donde el equipo permanece cargando varios meses.</li>
+        <li>Proyectos que exigen <strong>certificación EN 1065 clase D o superior</strong>.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Impacto del pandeo en la capacidad real</h2>
+      <p class="mb-4">
+        Aunque un puntal español B50 nuevo indique 3,500 kg de carga máxima, cuando se extiende a <strong>5.00 m</strong> su capacidad útil cae a cerca de <strong>1,500 kg</strong> por pandeo. Esta pérdida es menos marcada en el italiano porque trabaja en rangos más cortos. <em>Regla práctica DFAC:</em> deja un <strong>20 % de holgura</strong> entre la carga de diseño y la carga admisible del puntal a su altura real.
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Preguntas frecuentes</h2>
+      <div class="space-y-4">
+        <div><p class="font-bold">¿Cuál es más barato, el italiano o el español?</p><p>El italiano. En renta cuesta 15–25 % menos por unidad; en venta, aproximadamente 20 % menos.</p></div>
+        <div><p class="font-bold">¿Puedo mezclar ambos tipos en una misma obra?</p><p>Sí, siempre que el cálculo estructural lo contemple y cada zona reciba el puntal con la carga admisible adecuada a su altura.</p></div>
+        <div><p class="font-bold">¿Cuál dura más?</p><p>El español por ser más robusto. Con mantenimiento básico (limpieza, engrase del tornillo, revisión del pin) un puntal DFAC supera los 8 años de vida útil.</p></div>
+        <div><p class="font-bold">¿Cuál recomienda DFAC para una casa de 2 niveles en CDMX?</p><p>Italiano estándar de 2.00–3.50 m. Para la mayoría de los entrepisos residenciales de 2.70 a 3.00 m es la opción más eficiente y económica.</p></div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg mt-8">
+        <p class="font-bold text-lg mb-2">¿Dudas sobre qué puntal conviene a tu obra?</p>
+        <p class="mb-4">Equipo técnico DFAC — más de 15 años asesorando obras en CDMX, Estado de México y Querétaro. Te ayudamos a elegir y cotizar.</p>
+        <a href="${WA_CTA}" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">Cotizar por WhatsApp</a>
+      </div>
+    `,
+  },
+  {
+    slug: 'renta-de-puntales-en-cdmx-precios-cobertura-tiempos',
+    title: 'Renta de puntales en CDMX: precios 2026, cobertura y tiempos de entrega',
+    description:
+      'Renta de puntales metálicos en CDMX 2026: precios por pieza, zonas de cobertura en las 16 alcaldías y Zona Metropolitana, tiempos de entrega en 24 h y requisitos. Guía DFAC.',
+    date: '2026-11-16',
+    image: '/images/Galeria/WhatsApp Image 2025-08-27 at 1.27.00 PM.jpeg',
+    metaTitle:
+      'Renta de Puntales en CDMX 2026: precios y cobertura | DFAC Puntales',
+    metaDescription:
+      'Renta de puntales en CDMX 2026 desde $12 MXN/día. Cobertura en las 16 alcaldías y ZMVM, entrega en 24 h. Precios por tipo, requisitos y cotización WhatsApp.',
+    content: `
+      <p class="mb-4 text-lg bg-blue-50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+        <strong>En corto:</strong> La <strong>renta de puntales en CDMX</strong> en 2026 va de <strong>$12 a $28 MXN por pieza al día</strong> según tipo (italiano ligero, estándar o español reforzado). DFAC entrega en <strong>24 horas</strong> en las 16 alcaldías de la Ciudad de México y en los municipios conurbados del Estado de México, con plazos mínimos de renta de 15 días y descuentos por volumen desde 100 piezas.
+      </p>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Precios de renta 2026 (por pieza / día)</h2>
+      <div class="overflow-x-auto my-6">
+        <table class="w-full border border-slate-200 rounded-lg text-sm">
+          <thead class="bg-slate-100">
+            <tr>
+              <th class="p-3 text-left">Tipo de puntal</th>
+              <th class="p-3 text-left">Precio pieza / día</th>
+              <th class="p-3 text-left">Precio pieza / mes</th>
+              <th class="p-3 text-left">Depósito en garantía</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-200"><td class="p-3 font-medium">Italiano ligero 1.80–3.00 m</td><td class="p-3">$12 – $15</td><td class="p-3">$280 – $360</td><td class="p-3">$600 / pieza</td></tr>
+            <tr class="border-t border-slate-200 bg-slate-50"><td class="p-3 font-medium">Italiano estándar 2.00–3.50 m</td><td class="p-3">$15 – $18</td><td class="p-3">$360 – $440</td><td class="p-3">$700 / pieza</td></tr>
+            <tr class="border-t border-slate-200"><td class="p-3 font-medium">Español B40 2.50–4.00 m</td><td class="p-3">$20 – $24</td><td class="p-3">$500 – $600</td><td class="p-3">$900 / pieza</td></tr>
+            <tr class="border-t border-slate-200 bg-slate-50"><td class="p-3 font-medium">Español B50 3.00–5.00 m</td><td class="p-3">$24 – $28</td><td class="p-3">$600 – $700</td><td class="p-3">$1,100 / pieza</td></tr>
+          </tbody>
+        </table>
+        <p class="text-xs text-slate-500 mt-2">Precios de referencia 2026. Descuentos aplicables desde 100 piezas o contrato por 60+ días. Cotización final vía WhatsApp.</p>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Cobertura de entrega en CDMX y Zona Metropolitana</h2>
+      <p class="mb-4">DFAC entrega en <strong>24 horas hábiles</strong> en las siguientes zonas:</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>CDMX — 16 alcaldías:</strong> Álvaro Obregón, Azcapotzalco, Benito Juárez, Coyoacán, Cuajimalpa, Cuauhtémoc, Gustavo A. Madero, Iztacalco, Iztapalapa, La Magdalena Contreras, Miguel Hidalgo, Milpa Alta, Tláhuac, Tlalpan, Venustiano Carranza y Xochimilco.</li>
+        <li><strong>Estado de México (ZMVM):</strong> Naucalpan, Tlalnepantla, Ecatepec, Nezahualcóyotl, Cuautitlán Izcalli, Atizapán, Tultitlán, Huixquilucan, Tecámac, Chalco, Ixtapaluca y Texcoco.</li>
+        <li><strong>Entregas express (mismo día):</strong> disponibles para pedidos confirmados antes de las 11:00 h dentro de Benito Juárez, Cuauhtémoc, Iztacalco y Álvaro Obregón.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">¿Cuándo conviene rentar vs. comprar puntales en CDMX?</h2>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li><strong>Rentar:</strong> obras menores a 4 meses, proyectos únicos, picos de demanda, constructoras sin almacén.</li>
+        <li><strong>Comprar:</strong> flotillas de renta, constructoras con 3+ obras simultáneas, proyectos que superan 6 meses.</li>
+        <li><strong>Mixto (recomendado DFAC):</strong> comprar el 60 % del equipo base y rentar el 40 % de pico. Optimiza inversión y evita tiempo muerto.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Requisitos para rentar puntales con DFAC</h2>
+      <ol class="list-decimal pl-6 mb-4 space-y-2">
+        <li>Contrato firmado (persona física o moral) con dirección de obra.</li>
+        <li>Depósito en garantía reembolsable al devolver el equipo completo y en buen estado.</li>
+        <li>Mínimo <strong>15 días de renta</strong> por contrato.</li>
+        <li>Pago semanal, quincenal o mensual según duración de obra.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold mt-8 mb-4">Preguntas frecuentes sobre renta de puntales en CDMX</h2>
+      <div class="space-y-4">
+        <div><p class="font-bold">¿Cuánto cuesta rentar 100 puntales italianos por un mes en CDMX?</p><p>Aproximadamente <strong>$36,000 – $44,000 MXN</strong> para italiano estándar, más depósito reembolsable. Cotización exacta por WhatsApp.</p></div>
+        <div><p class="font-bold">¿En cuánto tiempo entregan?</p><p>24 horas hábiles en CDMX y ZMVM. Entrega express el mismo día en las alcaldías centrales si confirmas antes de las 11:00 h.</p></div>
+        <div><p class="font-bold">¿Qué pasa si se daña una pieza?</p><p>Se descuenta del depósito el costo de reparación o reposición a precio DFAC (sin sobreprecio comercial).</p></div>
+        <div><p class="font-bold">¿Hay descuento por volumen?</p><p>Sí. Desde 100 piezas el descuento parte en 8 % y escala hasta 20 % en pedidos mayores a 500 piezas con contrato de 60+ días.</p></div>
+        <div><p class="font-bold">¿Rentan fuera de CDMX?</p><p>Sí, cubrimos Estado de México y Querétaro. Para cotización en Bajío consulta nuestra nota específica (próxima publicación).</p></div>
+      </div>
+
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg mt-8">
+        <p class="font-bold text-lg mb-2">¿Listo para rentar puntales en CDMX?</p>
+        <p class="mb-4">Equipo técnico DFAC — más de 15 años con cobertura total en las 16 alcaldías y ZMVM. Entrega 24 h.</p>
+        <a href="${WA_CTA}" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">Cotizar renta por WhatsApp</a>
+      </div>
+    `,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
